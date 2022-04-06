@@ -1,0 +1,25 @@
+@use 'src/custom' as cus;
+
+.Logo {
+  max-width: 96px;
+}
+
+.Animation-paused {
+  animation-play-state: paused;
+}
+
+.Animation-running {
+  animation-play-state: running;
+}
+
+.Animation-forwardsFillMode {
+  animation-fill-mode: forwards;
+}
+
+.SpinnerContainer {
+  height: 100 - cus.$navbar-height;
+}
+
+.InputGroupDivision {
+  width: 200% !important;
+}

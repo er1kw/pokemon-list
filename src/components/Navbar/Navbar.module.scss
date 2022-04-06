@@ -1,0 +1,10 @@
+@use 'src/custom' as cus;
+
+.Navbar {
+  height: cus.$navbar-height;
+  min-height: 82px;
+}
+
+.NavbarHeader {
+  z-index: cus.$navbar-sticky-top-z-index !important;
+}

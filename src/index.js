@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { MyPokemonsProvider } from './components/MyPokemonsProvider/MyPokemonsProvider';
+import './custom.scss';
+import 'animate.css';
+
+const apolloClient = new ApolloClient({
+  uri: 'https://graphql-pokeapi.graphcdn.app/',
+  cache: new InMemoryCache(),
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <MyPokemonsProvider>
+        <ApolloProvider client={apolloClient}>
+          <App />
+        </ApolloProvider>
+      </MyPokemonsProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

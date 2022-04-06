@@ -1,0 +1,6 @@
+@use 'src/custom' as cus;
+
+.MessengerContainer {
+  z-index: cus.$zindex-tooltip + 1;
+  max-width: 320px;
+}
