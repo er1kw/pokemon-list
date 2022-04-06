@@ -15,7 +15,7 @@ const apolloClient = new ApolloClient({
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/pokemon-list">
       <MyPokemonsProvider>
         <ApolloProvider client={apolloClient}>
           <App />
