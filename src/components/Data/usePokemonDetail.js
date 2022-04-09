@@ -30,7 +30,6 @@ function usePokemonDetail(pokemonName) {
   if (loading) return null;
   if (error) return `Error! :( ${error.message}`;
 
-  console.log('Response from server', data);
   return data;
 }
 

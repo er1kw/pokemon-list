@@ -32,7 +32,6 @@ function usePokemons(page = 1) {
   if (loading) return null;
   if (error) return `Error! :( ${error.message}`;
 
-  console.log('Response from server', data);
   return {
     list: data.pokemons.results,
     isHideLoadButton: Math.ceil(data.pokemons.count / gqlVariables.limit) === page,
